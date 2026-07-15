@@ -1,56 +1,74 @@
-function showMessage(){
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    document.getElementById("message").style.display="block";
+body{
+    background:#ffe8f1;
+    font-family:Arial,sans-serif;
 
-    flowers();
-    hearts();
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:100vh;
+}
+
+.card{
+
+    width:500px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
 
 }
 
-function flowers(){
+.cat{
 
-    for(let i=0;i<40;i++){
+    font-size:80px;
 
-        let flower=document.createElement("div");
-
-        flower.className="flower";
-        flower.innerHTML="🌸";
-
-        flower.style.left=Math.random()*100+"vw";
-        flower.style.fontSize=(20+Math.random()*20)+"px";
-        flower.style.animationDuration=(3+Math.random()*3)+"s";
-
-        document.body.appendChild(flower);
-
-        setTimeout(()=>{
-            flower.remove();
-        },6000);
-
-    }
+    margin-bottom:20px;
 
 }
 
-function hearts(){
+h1{
 
-    const emojis=["❤️","💖","💕","💗","💝"];
+    color:#ff4f88;
 
-    for(let i=0;i<30;i++){
+    margin-bottom:20px;
 
-        let heart=document.createElement("div");
+}
 
-        heart.className="heart";
-        heart.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+p{
 
-        heart.style.left=Math.random()*100+"vw";
-        heart.style.fontSize=(18+Math.random()*20)+"px";
-        heart.style.animationDuration=(4+Math.random()*3)+"s";
+    line-height:1.7;
 
-        document.body.appendChild(heart);
+    color:#555;
 
-        setTimeout(()=>{
-            heart.remove();
-        },7000);
+    margin-bottom:30px;
 
-    }
+}
+
+button{
+
+    background:#ff4f88;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    font-size:18px;
+
+    cursor:pointer;
 
 }
